@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { User } from './types.d'
+import { UsersList } from './components/UsersList'
 
 function App() {
   const [users, setUsers] = useState<User[]>([])
@@ -32,7 +33,7 @@ function App() {
         </div>
       </header>
       <main>
-        <p>Lista de Usuarios</p>
+        <UsersList users={users} />
       </main>
     </div>
   )
